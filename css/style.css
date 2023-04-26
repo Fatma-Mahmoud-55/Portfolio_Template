@@ -1,0 +1,325 @@
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;500;600;700&display=swap');
+
+:root {
+    --color-body: #b6cbce;
+    --color-heading: #eef3db;
+    --color-base: #033f47;
+    --color-base2: #022a30;
+    --color-brand: #e0f780;
+    --color-brand2: #deff58;
+    --sidbar-width: 240px;
+    --font-base: "Bai Jamjuree";
+}
+
+body {
+    background-color: var(--color-base2);
+    color: var(--color-body);
+    font-family: var(--font-base), sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: var(--color-heading);
+    font-weight: 700;
+
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-body);
+    transition: all 0.4s ease;
+}
+
+a:hover {
+    color: var(--color-brand);
+}
+
+img {
+    width: 100%;
+}
+
+.text-brand {
+    color: var(--color-brand);
+}
+
+.bg-base {
+    background-color: var(--color-base);
+}
+
+
+.full-height {
+    min-height: 100vh;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.1);
+}
+
+.shadow-effect {
+    transition: all 0.5s;
+}
+
+.shadow-effect:hover {
+    box-shadow: -6px 6px 0 0 var(--color-brand);
+}
+
+.container {
+    box-sizing: border-box;
+}
+/* NavBar */
+.navbar {
+    background-color: var(--color-base);
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #fff;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: var(--color-brand);
+
+}
+
+.navbar-dark .navbar-nav .nav-link.active {
+    color: var(--color-brand);
+}
+
+
+@media (min-width: 992px) {
+    .navbar {
+        min-height: 100vh;
+        width: var(--sidbar-width);
+        background: linear-gradient(rgba(3, 63, 71, 0.85), rgba(3, 63, 71, 0.8)), url("../images/Untitled\ _\ Photographer.png");
+        background-size: cover;
+        background-position: center;
+    }
+
+
+    .navbar-brand img {
+        border: 8px solid var(--color-brand)
+    }
+
+
+    /* content wrapper */
+
+    #content-wrapper {
+        padding-left: var(--sidbar-width)
+    }
+
+
+
+}
+
+
+/* btn */
+
+.btn {
+    padding: 12px 28px;
+    font-weight: 700;
+}
+
+.btn-brand {
+    background-color: var(--color-brand);
+    border-color: var(--color-brand);
+    color: var(--color-base);
+}
+
+.btn-brand:hover,
+.btn-brand:focus {
+    background-color: var(--color-brand2);
+    border-color: var(--color-brand);
+}
+
+.link-custom {
+    font-weight: 700;
+    position: relative;
+}
+
+.link-custom::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background-color: var(--color-brand);
+    position: absolute;
+    left: 0;
+    top: 110%;
+    transition: all 0.4s;
+}
+
+.link-custom:hover::after {
+    width: 100%;
+}
+
+/* card work */
+
+
+
+.card-custom,
+.card-custom-image,
+.card-custom-content {
+    border-radius: 30px;
+}
+
+.card-custom .card-custom-image {
+    overflow: hidden;
+}
+
+.card-custom .card-custom-image img {
+    width: 37vw;
+    height: 300px;
+    transition: all 0.4s ease;
+
+}
+
+.card-custom:hover .card-custom-image img {
+    transform: scale(1.1);
+}
+
+/* about */
+
+
+#about {
+    background: linear-gradient(rgba(3, 63, 71, 0.85), rgba(3, 63, 71, 0.8)), url("../images/plant&sun.gif");
+    background-size: cover;
+    background-position: center;
+    font-weight: 700;
+    font-size: 25px;
+    color: var(--color-heading);
+    display: flex;
+
+
+
+}
+
+#aboutMe {
+
+    position: relative;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(255, 255, 255, 0.1);
+    box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 15px;
+    overflow: hidden;
+    backdrop-filter: blur(10px);
+
+}
+
+
+
+#aboutMe::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.05);
+    pointer-events: none;
+
+
+
+}
+
+
+/* skill */
+
+#skills {
+    display: flex;
+}
+
+#skills img {
+    width: 100%;
+    height: 100px;
+    border-radius: 30px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* #skills h4 {
+    margin: -10px;
+    font-size: 1rem;
+    text-align: center;
+} */
+
+
+@media (max-width:1000px){
+    #skills h4 {
+        font-size: 18px;
+        margin: -10px;
+        text-align: center;
+        /* word-wrap:break-word; */
+    }
+
+    #skillContainer .card-custom {
+        width: 100%;
+        
+    }
+
+    .card-custom .card-custom-image img {
+        width: 95vw;
+        height: 300px;
+    }
+
+}
+
+
+@media (max-width:1250px){
+    #skills h4 {
+        margin: -10px;
+        font-size: 1rem;
+        text-align: center;
+    }
+}
+
+
+/* contact */
+
+#contact .form-control {
+    background-color: var(--color-base);
+    border-color: var(--color-base) ;
+    color: var(--color-body);
+}
+
+
+#contact .form-control:focus {
+    border-color: var(--color-brand);
+    box-shadow: none;
+}
+
+#contact .form-control::placeholder {
+    color: var(--color-body);
+}
+
+#contact input.form-control {
+    height: 44px;
+}
+
+
+/* social icons */
+
+/* .social-icons {
+
+} */
+
+.social-icons a {
+    width: 40px;
+    height: 40px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-color:  var(--color-base);
+    border-radius: 100px;
+    font-size: 24px;
+}
